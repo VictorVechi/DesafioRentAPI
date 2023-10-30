@@ -1,0 +1,7 @@
+version: "3.2"
+services:
+    mysql-server-db: 
+      container_name: desafio_victor_vechi
+      image: banco_desafio
+      ports: 
+        - "3307:3306"
