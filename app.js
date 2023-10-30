@@ -1,4 +1,6 @@
 import express from "express";
+import VeiculoController from "./src/controller/VeiculoController";
+
 
 const app = express()
 
@@ -10,3 +12,4 @@ app.listen(PORT, ()=>{
 
 app.use(express.json())
 
+VeiculoController.rotas(app)
