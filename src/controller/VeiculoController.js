@@ -33,6 +33,4 @@ class VeiculoController {
 
         })
     }
-
-
-}
+} export default VeiculoController
