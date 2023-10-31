@@ -1,3 +1,4 @@
+import VeiculosModel from "../models/VeiculosModel"
 
 
 class VeiculoController {
@@ -8,8 +9,13 @@ class VeiculoController {
 
     static rotas(app){
 
-        app.get('/veiculos', (request, response) => {
-
+        app.get('/veiculos', async (request, response) => {
+            try {
+                const veiculos = await VeiculosModel.findAll()
+                response.status(200).json(veiculos)
+            } catch(error){
+                response.status(400).json({error: true, message:error})
+            }
 
         })
 
