@@ -1,5 +1,5 @@
 import express from "express";
-import VeiculoController from "./src/controller/VeiculoController.js";
+import VeiculosController from "./src/controller/VeiculosController.js";
 import sequelize from "./src/config/database.js";
 
 // Inicia o express
@@ -23,4 +23,4 @@ try {
 app.use(express.json())
 
 //Inicializa as rotas para veículos
-VeiculoController.rotas(app)
+VeiculosController.rotas(app)

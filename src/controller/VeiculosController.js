@@ -1,7 +1,7 @@
-import VeiculosModel from "../models/VeiculosModel"
+import VeiculosModel from "../models/VeiculosModel.js"
 
 
-class VeiculoController {
+class VeiculosController {
 
     /**
      * @param {Express} app
@@ -39,4 +39,4 @@ class VeiculoController {
 
         })
     }
-} export default VeiculoController
+} export default VeiculosController
