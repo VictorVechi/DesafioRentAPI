@@ -1,14 +1,43 @@
-class VeiculosModel{
-    constructor(locadora, modelo, marca, ano, motor, portas, cambio, ar_condicionado, updatedAt, createdAt){
-        this.locadora = locadora
-        this.modelo = modelo
-        this.marca = marca
-        this.ano = ano
-        this.motor = motor
-        this.portas = portas
-        this.cambio = cambio
-        this.ar_condicionado = ar_condicionado
-        this.updatedAt = updatedAt
-        this.createdAt = createdAt
+import { Sequelize, DataTypes } from "sequelize"
+import sequelize from "../config/database.js"
+const VeiculosModel = sequelize.define('Veiculos',{
+    id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey: true
+    },
+    locadora : {
+        type: DataTypes.STRING(150),
+        allowNull: false,
+    },
+    modelo: {
+        type: DataTypes.STRING(150),
+        allowNull: false,
+    },
+    marca: {
+        type: DataTypes.STRING(150),
+        allowNull: false,
+    },
+    ano: {
+        type: DataTypes.INTEGER,
+        allowNull:false
+    },
+    motor: {
+        type: DataTypes.STRING(150),
+        allowNull:false,
+    },
+    portas: {
+        type: DataTypes.INTEGER,
+        allowNull:false
+    },
+    cambio: {
+        type: DataTypes.STRING(150),
+        allowNull:false,
+    },
+    ar_condicionado: {
+        type: DataTypes.BOOLEAN,
+        allowNull:false
     }
-} export default Veiculo
+})
+export default VeiculosModel
