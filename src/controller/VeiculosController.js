@@ -43,7 +43,7 @@ class VeiculosController {
             }
         })
 
-        app.put('/veiculos:id', async (request, response) => {
+        app.put('/veiculos/:id', async (request, response) => {
             try {
                 const id = request.params.id
                 const data = request.body
@@ -58,9 +58,18 @@ class VeiculosController {
             }
         })
 
-        app.delete('/veiculos:id', (request, response) => {
-
-
+        app.delete('/veiculos/:id', async (request, response) => {
+            try {
+                const id = request.params.id
+                const veiculo = await VeiculosDAO.deletarVeiculo(id)
+                if (!!veiculo) {
+                    response.status(204).json({ error: false, message: 'Veículo deletado com sucesso' })
+                } else {
+                    response.status(404).json()
+                }
+            } catch (error) {
+                response.status(502).json({ error: true, message: error })
+            }
         })
     }
 } export default VeiculosController
