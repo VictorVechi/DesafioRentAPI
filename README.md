@@ -2,7 +2,7 @@
 
 # Desafio Rentcars
 <p>
-Esse projeto foi desenvolvido pensando proposto pela Rentcars, a seguir estão as informações e softwares necessários para executar o projeto.
+Esse projeto foi desenvolvido pensando no desafio proposto pela Rentcars, a seguir estão as informações e softwares necessários para executar o projeto.
 </p>
 
 ## Requisitos
