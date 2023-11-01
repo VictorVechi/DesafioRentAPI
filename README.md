@@ -67,13 +67,13 @@ $ npm start
 <li>DELETE http://localhost:3000/veiculos/id</li>
 </ul>
 
-<u>GET</u>[: Rota para obter registros do banco de dados]
+<u>GET</u>: Rota para obter registros do banco de dados
 
-<u>POST</u>[: Rota para cadastrar dados no banco]
+<u>POST</u>: Rota para cadastrar dados no banco
 
-<u>PUT</u>[: Rota para atualizar dados no banco]
+<u>PUT</u>: Rota para atualizar dados no banco
 
-<u>DELETE</u>[: Rota para deletar registros do banco]
+<u>DELETE</u>: Rota para deletar registros do banco
 
 <p>Para utilizá-las, apenas substitua o "id" pelo id desejado.</p>
 <p>Exemplo:</p>
