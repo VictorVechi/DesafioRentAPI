@@ -67,13 +67,13 @@ $ npm start
 <li>DELETE http://localhost:3000/veiculos/id</li>
 </ul>
 
-<u>GET</u>: Rota para obter registros do banco
+<u>GET</u>[: Rota para obter registros do banco de dados](README.md#get---rota-veiculos)
 
-<u>POST</u>: Rota para cadastrar dados no banco
+<u>POST</u>[: Rota para cadastrar dados no banco](README.md#post---rota-veiculos)
 
-<u>PUT</u>: Rota para atualizar dados no banco
+<u>PUT</u>[: Rota para atualizar dados no banco](README.md#put---rota-veiculosid)
 
-<u>DELETE</u>: Rota para deletar registros do banco
+<u>DELETE</u>[: Rota para deletar registros do banco](README.md#delete---rota-veiculosid)
 
 <p>Para utilizá-las, apenas substitua o "id" pelo id desejado.</p>
 <p>Exemplo:</p>
@@ -82,7 +82,11 @@ $ npm start
 http://localhost:3000/veiculos/6998c2bf-b4cd-4c41-a05c-7fe99c510ec7
 ```
 
-<p>Exemplo de como deve ser feito o post de veiculos:</p>
+## Exemplos de uso
+
+### POST - Rota '/veiculos'
+
+#### Entrada
 
 ```json
 TODOS OS CAMPOS DEVEM EXISTIR!
@@ -98,8 +102,20 @@ TODOS OS CAMPOS DEVEM EXISTIR!
 }
 ```
 
-<p>Exemplo de resposta (GET) de Veiculos:</p>
+#### Saida
 
+```json
+{
+ "error":false,
+ "message":"'Veículo criado com sucesso'"
+}
+```
+
+### GET - Rota '/veiculos'
+
+* A rota GET retorna todos os veículos cadastrados no banco de dados
+
+#### Saida
 ```json
 {
  "id": "6998c2bf-b4cd-4c41-a05c-7fe99c510ec7",
@@ -116,8 +132,38 @@ TODOS OS CAMPOS DEVEM EXISTIR!
 }
 ```
 
-<p>Exemplo de como deve ser feito o put de veiculos:</p>
+### GET - Rota '/veiculos/:id'
 
+* A rota GET com ID retorna apenas o veículo com o id informado
+
+#### Ex rota:
+/veiculos/6998c2bf-b4cd-4c41-a05c-7fe99c510ec7
+
+#### Saida
+```json
+{
+ "id": "6998c2bf-b4cd-4c41-a05c-7fe99c510ec7",
+ "locadora": "Movida",
+ "modelo": "Virtus",
+ "marca": "Volkswagen",
+ "ano": 2023,
+ "motor": "1.0",
+ "portas": 4,
+ "cambio": "Automatico",
+ "ar_condicionado": true,
+ "createdAt": "2023-10-31T13:36:47.000Z",
+ "updatedAt": "2023-10-31T13:36:47.000Z"
+}
+```
+
+### PUT - Rota '/veiculos/:id'
+
+* A rota PUT com ID atualiza os dados do veículo com o id informado
+
+#### Ex rota:
+/veiculos/6998c2bf-b4cd-4c41-a05c-7fe99c510ec7
+
+#### Entrada
 ```json
 TODOS OS CAMPOS DEVEM EXISTIR!
 {
@@ -129,6 +175,31 @@ TODOS OS CAMPOS DEVEM EXISTIR!
  "portas": 4,
  "cambio": "Automatico",
  "ar_condicionado": false
+}
+```
+
+### Saida
+
+```json
+{
+ "error":false,
+ "message":"Veículo atualizado com sucesso"
+}
+```
+
+### DELETE - Rota '/veiculos/:id'
+
+* A rota DELETE com ID deleta o veículo com o id informado
+
+#### Ex rota:
+/veiculos/6998c2bf-b4cd-4c41-a05c-7fe99c510ec7
+
+### Saida
+
+```json
+{
+ "error":false,
+ "message":"Veículo deletado com sucesso"
 }
 ```
 
