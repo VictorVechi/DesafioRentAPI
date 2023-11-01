@@ -39,13 +39,23 @@ class VeiculosController {
                 const veiculo = await VeiculosDAO.criarVeiculo(data)
                 response.status(201).json({ error: false, message: 'Veículo criado com sucesso' })
             } catch (error) {
-                response.status(400).json({error: true, message:error, alerta: 'Verifique os campos e tente novamente'}) 
+                response.status(400).json({ error: true, message: error, alerta: 'Verifique os campos e tente novamente' })
             }
         })
 
-        app.put('/veiculos:id', (request, response) => {
-
-
+        app.put('/veiculos:id', async (request, response) => {
+            try {
+                const id = request.params.id
+                const data = request.body
+                const veiculo = await VeiculosDAO.atualizarVeiculo(id, data)
+                if (!!veiculo) {
+                    response.status(204).json({ error: false, message: 'Veículo atualizado com sucesso' })
+                } else {
+                    response.status(404).json()
+                }
+            } catch (error) {
+                response.status(400).json({ error: true, message: error, alerta: 'Verifique os campos e tente novamente' })
+            }
         })
 
         app.delete('/veiculos:id', (request, response) => {
