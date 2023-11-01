@@ -33,9 +33,14 @@ class VeiculosController {
 
         })
 
-        app.post('/veiculos', (request, response) => {
-
-
+        app.post('/veiculos', async (request, response) => {
+            try {
+                const data = request.body
+                const veiculo = await VeiculosDAO.criarVeiculo(data)
+                response.status(201).json({ error: false, message: 'Veículo criado com sucesso' })
+            } catch (error) {
+                response.status(400).json({error: true, message:error, alerta: 'Verifique os campos e tente novamente'}) 
+            }
         })
 
         app.put('/veiculos:id', (request, response) => {
