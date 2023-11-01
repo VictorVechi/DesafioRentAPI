@@ -53,7 +53,9 @@ $ docker-compose up
 ```
 
 4. Agora iremos iniciar a API
+   
 <p><strong>Para executar o comando a seguir será necessário abrir um novo terminal e entrar na pasta do projeto novamente</strong></p>
+
 ```bash
 $ npm start
 ```
