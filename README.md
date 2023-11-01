@@ -96,18 +96,18 @@ TODOS OS CAMPOS DEVEM EXISTIR!
 
 ```json
 {
-	"id": "6998c2bf-b4cd-4c41-a05c-7fe99c510ec7",
-	"locadora": "Movida",
-	"modelo": "Virtus",
-	"marca": "Volkswagen",
-	"ano": 2023,
-	"motor": "1.0",
-	"portas": 4,
-	"cambio": "Automatico",
-	"ar_condicionado": true,
-	"createdAt": "2023-10-31T13:36:47.000Z",
-	"updatedAt": "2023-10-31T13:36:47.000Z"
-	}
+ "id": "6998c2bf-b4cd-4c41-a05c-7fe99c510ec7",
+ "locadora": "Movida",
+ "modelo": "Virtus",
+ "marca": "Volkswagen",
+ "ano": 2023,
+ "motor": "1.0",
+ "portas": 4,
+ "cambio": "Automatico",
+ "ar_condicionado": true,
+ "createdAt": "2023-10-31T13:36:47.000Z",
+ "updatedAt": "2023-10-31T13:36:47.000Z"
+}
 ```
 
 <p>Exemplo de como deve ser feito o put de veiculos:</p>
