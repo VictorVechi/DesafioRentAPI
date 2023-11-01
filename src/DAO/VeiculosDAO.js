@@ -23,6 +23,7 @@ class VeiculosDAO extends DAO {
     // Atualiza um veiculo no banco de dados
     static async atualizarVeiculo(id, data) {
         const veiculo = await this.findById(VeiculosModel, id)
+        // Verifica se o veículo existe para atualizar
         if (!!veiculo) {
             veiculo.locadora = data.locadora
             veiculo.modelo = data.modelo
@@ -42,6 +43,7 @@ class VeiculosDAO extends DAO {
     // Deleta um veiculo no banco de dados
     static async deletarVeiculo(id) {
         const veiculo = await this.findById(VeiculosModel, id)
+        // Verifica se o veículo existe para deletar
         if (!!veiculo) {
             const response = await this.deleteById(veiculo)
             return response
