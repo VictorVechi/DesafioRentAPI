@@ -1,5 +1,4 @@
-import VeiculosModel from "../models/VeiculosModel.js"
-
+import VeiculosDAO from "../DAO/VeiculosDAO.js"
 
 class VeiculosController {
 
@@ -11,7 +10,7 @@ class VeiculosController {
 
         app.get('/veiculos', async (request, response) => {
             try {
-                const veiculos = await VeiculosModel.findAll()
+                const veiculos = await VeiculosDAO.listarVeiculos()
                 response.status(200).json(veiculos)
             } catch (error) {
                 response.status(400).json({ error: true, message: error })
@@ -22,7 +21,7 @@ class VeiculosController {
         app.get('/veiculos/:id', async (request, response) => {
             try {
                 const id = request.params.id
-                const veiculo = await VeiculosModel.findByPk(id)
+                const veiculo = await VeiculosDAO.listarVeiculoPorId(id)
                 if (!!veiculo) {
                     response.status(200).json(veiculo)
                 } else {
