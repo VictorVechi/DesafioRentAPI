@@ -28,19 +28,25 @@ Foi utilizado no projeto as stacks a seguir:
 
 
 ## Como executar o projeto
+
 1. Clonaremos o repositório para podermos executar localmente
 ```bash
 # Clonando o repositório
 $ git clone https://github.com/VictorVechi/DesafioRentAPI.git
 $ cd DesafioRentAPI
 ```
+<p><strong>Todos os comandos a seguir deverão ser executados na pasta do projeto</strong></p>
+
 2. Iremos instalar as dependências necessárias para o projeto executando o comando a seguir
+
 ```bash
 # Instalando as dependências
 $ npm install
 ```
 3. Antes de executarmos a api, é necessário criar a imagem e o container do docker. Abaixo segue os comandos necessários
 ```bash
+# Para Windows, é necessário abrir o Docker Desktop antes de executar os comandos
+# Para Linux, é só executar os comandos normalmente
 # Criando o banco de dados com docker
 $ docker build -t banco_desafio ./
 $ docker-compose up
