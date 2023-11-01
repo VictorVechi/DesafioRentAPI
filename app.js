@@ -6,7 +6,7 @@ import sequelize from "./src/config/database.js";
 const app = express()
 
 //Seleciona uma porta setado no .env ou a porta 3080
-const PORT = process.env.PORT || 3000
+const PORT = 3000
 
 try {
     //Sincroniza as models com as entidades no banco de dados
