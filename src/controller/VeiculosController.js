@@ -55,7 +55,7 @@ class VeiculosController {
                 const veiculo = await VeiculosDAO.atualizarVeiculo(id, data)
                 // Verifica se o veículo existe
                 if (!!veiculo) {
-                    response.status(204).json({ error: false, message: 'Veículo atualizado com sucesso' })
+                    response.status(200).json({ error: false, message: 'Veículo atualizado com sucesso' })
                 } else {
                     // Caso não exista, retorna um erro
                     response.status(404).json()
@@ -71,7 +71,7 @@ class VeiculosController {
                 const veiculo = await VeiculosDAO.deletarVeiculo(id)
                 // Verifica se o veículo existe
                 if (!!veiculo) {
-                    response.status(204).json({ error: false, message: 'Veículo deletado com sucesso' })
+                    response.status(200).json({ error: false, message: 'Veículo deletado com sucesso' })
                 } else {
                     // Caso não exista, retorna um erro
                     response.status(404).json()
