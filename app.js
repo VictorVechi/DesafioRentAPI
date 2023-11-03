@@ -1,6 +1,7 @@
 import express from "express";
 import VeiculosController from "./src/controller/VeiculosController.js";
 import sequelize from "./src/config/database.js";
+import cors from "cors";
 
 // Inicia o express
 const app = express()
@@ -19,6 +20,9 @@ try {
     console.log(error.message)
 }
 
+
+//Configura o express para receber requisições de outros domínios
+app.use(cors('*'))
 //Configura o express para receber dados em json
 app.use(express.json())
 
