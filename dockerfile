@@ -1,4 +1,4 @@
-FROM mysql:latest
+FROM mysql:8.0
 
 ARG ROOT_PASSWORD=ANSKk08aPEDbFjDO
 ENV MYSQL_DATABASE=testing
