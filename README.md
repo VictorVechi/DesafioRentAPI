@@ -44,6 +44,21 @@ $ cd DesafioRentAPI
 $ npm install
 ```
 3. Antes de executarmos a api, é necessário criar a imagem e o container do docker. Abaixo segue os comandos necessários
+
+#### Iremos começar criando uma pasta para ser o volume do container, para isso, execute o comando a seguir:
+
+```bash
+mkdir /tmp/mysql-data
+```
+
+#### Podemos executar os comandos do docker de duas formas, através do dockerfile e docker-compose ou através da linha de comando. Abaixo segue os comandos para executar através da linha de comando
+
+```bash
+docker run --name basic-mysql --rm -v /tmp/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=ANSKk08aPEDbFjDO -e MYSQL_DATABASE=testing -p 3307:3306 -it mysql:8.0
+```
+
+####  Caso queira executar os comandos através do dockerfile e docker-compose, basta executar os comandos a seguir
+
 ```bash
 # Para Windows, é necessário abrir o Docker Desktop antes de executar os comandos
 # Para Linux, é só executar os comandos normalmente
